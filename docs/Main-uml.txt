@@ -1,3 +1,4 @@
 Main-uml
 __________
-+runSimulation(int months, int rabbits, int wolves)
++ main(String[] args)
++ runSimulation(int months, int rabbits, int wolves)
