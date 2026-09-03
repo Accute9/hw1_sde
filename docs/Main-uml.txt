@@ -1,0 +1,3 @@
+Main-uml
+__________
++runSimulation(int months, int rabbits, int wolves)

@@ -1,8 +1,0 @@
-Tests:
-1. months = 2, rabbits = 3, wolves = 2: -> rabbits = 0, wolves = 0
-2. months = 1, rabbits = 5, wolves = 1: -> rabbits = 8, wolves = 1
-3. months = 3, rabbits = 0, wolves = 3: -> rabbits = 0, wolves = 0
-4. months = 1, rabbits = 2, wolves = 5: -> rabbits = 0, wolves = 3
-5. months = 5, rabbits = 3, wolves = 0: -> rabbits = 1198, wolves = 0
-
-All tests satisfied

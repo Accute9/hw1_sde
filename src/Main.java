@@ -31,8 +31,8 @@ public class Main {
                 }
             }
             wolves = wolvesLeft;
-            wolves += Math.floorDiv(wolves, 2);
-            rabbits += (5 * Math.floorDiv(rabbits, 2));
+            wolves += (wolves / 2);
+            rabbits += (5 * (rabbits / 2));
             months -= 1;
         }
         System.out.println("At the end of the simulation, there are " + wolves + " wolves and " + rabbits + " rabbits.\n");
