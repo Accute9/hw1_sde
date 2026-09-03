@@ -1,0 +1,28 @@
+Assumptions / Rules:
+- Wolves eat no more than 2 rabbits each month
+- Rabbits that survive the whole month produce offspring (litter of 5 per 2)
+- Wolves who eat no rabbits die
+- Wolves must survive the whole month to produce offspring (1 cub per 2)
+- Wolves eat rabbits one at a time - ex: if there are 2 rabbits and 2 wolves, each wolf eats 1 rabbit
+    - If there are rabbits still left after each wolf has eaten one, wolves will eat another until no more rabbits are left or each wolf has eaten two
+
+Pseudocode:
+
+function runSimulation(months, rabbits, wolves)
+    while months > 0:
+        wolvesLeft = 0 // keep track of number of wolves that have eaten (this is the number that lives)
+        while rabbits > 0 and wolvesLeft < wolves:
+            decrease rabbits by 1
+            increase wolvesEaten by 1
+        // Loop again for second round of wolves in case there are rabbits still alive
+        secondWolvesCount = 0 // keep track of wolves that have eaten two rabbits
+        while secondWolvesCount < wolves and rabbits < 0:
+            decrease rabbits by 1
+            increase secondWolvesCount by 1
+        wolves = wolvesLeft
+        wolf_pairs = wolves / 2 (rounded down)
+        increase wolves by wolf_pairs
+        rabbit_pairs = 5 * (rabbits / 2 (rounded down))
+        increase rabbits by rabbit_pairs
+        decrease months by 1
+    return rabbits, wolves
